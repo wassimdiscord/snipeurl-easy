@@ -1,8 +1,8 @@
 let config = {
-    guild: "",
-    channel: "",
-    code: "",
-    timeout: 250
+    guild: "", // obligatoire 
+    channel: "", // facultatif 
+    code: "", // obligatoire 
+    timeout: 250 // obligatoire 
 
 }
 
@@ -36,7 +36,7 @@ function snipe(token) {
 
                 } else if (res) {
                     if (body.code === config.code) {
-                        client.channels.cache.get(config.channel).send("@everyone " + "discord.gg/" + config.code + " <3 by wassim gamin")
+                    if(channel) client.channels.cache.get(config.channel).send("@everyone " + "discord.gg/" + config.code + " <3 by wassim gamin")
 
                         console.log(`${new Date()} snipe`)
                     }
