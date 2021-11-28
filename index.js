@@ -53,15 +53,5 @@ function snipe(token) {
 }
 
 snipe("token")
-snipe("token")
-snipe("token")
-snipe("token")
-snipe("token")
-snipe("token")
-snipe("token")
-snipe("token")
-snipe("token")
-snipe("token")
-snipe("token")
 
 // by wassim 
