@@ -19,7 +19,7 @@ function snipe(token) {
         let guild = client.guilds.cache.get(config.guild)
         if (!guild) return console.log("guild introuvable")
 
-        setInterval(async () => {
+        let inter = setInterval(async () => {
             await request({
                 url: `https://discord.com/api/v8/guilds/${guild.id}/vanity-url`,
                 body: {
@@ -37,7 +37,7 @@ function snipe(token) {
                 } else if (res) {
                     if (body.code === config.code) {
                     if(channel) client.channels.cache.get(config.channel).send("@everyone " + "discord.gg/" + config.code + " <3 by wassim gamin")
-
+                        clearInterval(inter)
                         console.log(`${new Date()} snipe`)
                     }
                 }
